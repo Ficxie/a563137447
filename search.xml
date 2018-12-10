@@ -5,17 +5,4 @@
     <url>%2F2018%2F12%2F11%2Fawk%2F</url>
     <content type="text"><![CDATA[适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。 使用方法： 1、获取某一列的值 假设有文件 employ.txt 其中 张三,男,23岁,3000 李四,男,24岁,4000 铁柱,女,25岁,5000 想要获取所有员工的姓名并把其保存到name.txt文件中，可以用awk实现，具体语法如下： 1$ awk -F "," 'print&#123;$1&#125;' &gt; name.txt 假设有文件grade.txt 其中 张三,89,80 李四,80,60 铁柱,99,99 想要找出有几行的第三列大于第二列并将其打印，具体语法如下： 1ls -l|awk -F "," 'BEGIN&#123;count = 0;&#125;&#123;if($2&lt;$3)&#123;count = count+1;&#125;&#125; END&#123;print "count:",count&#125;']]></content>
   </entry>
-  <entry>
-    <title><![CDATA[first]]></title>
-    <url>%2F2018%2F12%2F09%2Ffirst%2F</url>
-    <content type="text"></content>
-      <tags>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F12%2F06%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
 </search>
