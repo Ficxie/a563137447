@@ -294,6 +294,127 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/awk/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FicXie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dog.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FicXie's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/11/awk/" itemprop="url">使用awk完成同一文件不同列的比较</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-11T00:17:53+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>  适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。<br>  使用方法：<br>  1、获取某一列的值<br>  假设有文件 employ.txt 其中<br>  张三,男,23岁,3000<br>  李四,男,24岁,4000<br>  铁柱,女,25岁,5000<br>  想要获取所有员工的姓名并把其保存到name.txt文件中，可以用awk实现，具体语法如下：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ awk -F <span class="string">","</span> <span class="string">'print&#123;$1&#125;'</span> &gt; name.txt</span><br></pre></td></tr></table></figure></p>
+<p>  假设有文件grade.txt 其中<br>  张三,89,80<br>  李四,80,60<br>  铁柱,99,99<br>  想要找出有几行的第三列大于第二列并将其打印，具体语法如下：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l|awk -F <span class="string">","</span> <span class="string">'BEGIN&#123;count = 0;&#125;&#123;if($2&lt;$3)&#123;count = count+1;&#125;&#125; END&#123;print "count:",count&#125;'</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/09/first/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -576,7 +697,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
