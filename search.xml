@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HTML5新特性总结]]></title>
+    <url>%2F2018%2F12%2F12%2FHTML5%E6%96%B0%E7%89%B9%E6%80%A7%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[awk语法]]></title>
     <url>%2F2018%2F12%2F11%2Fawk%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[awk命令的常用语法知识awk命令语法：awk [-F|-f|-v] ‘BEGIN{} // {command1; command2} END{}’ file 其中的参数（参数不一定需要全都有）： [-F|-f|-v] 大参数，-F指定分隔符，-f调用脚本，-v定义变量 var=value '' 引用代码块 BEGIN 初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量， 设置FS分隔符，可以在其中写print // 匹配代码块，可以是字符串或正则表达式 用法/pattern/ {} 命令代码块，可以是while可、if、print等语法格式与c类似 ; 多条命令使用分号分隔 END 结尾代码块，最终计算或者最后结果输出 file 文件路径文件名，例：/etc/passwd 常用变量： $0 表示整个当前行 $1 每行第一个字段第二个字段$2以此类推 NF 字段数量变量,每行多少个字段 FS BEGIN{FS='分隔符'} NR 每行的记录号，显示第一行awk -F","'NR==1{print}' file FNR 与NR类似，不过多文件记录不递增，每个文件都从1开始 \t 制表符 \n 换行符 OFS 输出字段分隔符，默认也是空格，可以改为制表符等，例OFS="\t" -F'[:#/]' 定义三个分隔符]]></content>
