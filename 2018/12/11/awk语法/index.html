@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="A man can be destroyed but not defeated.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FicXie&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="awk命令的常用语法知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="awk语法">
+<meta property="og:url" content="http://yoursite.com/2018/12/11/awk语法/index.html">
 <meta property="og:site_name" content="FicXie&#39;s Notes">
-<meta property="og:description" content="A man can be destroyed but not defeated.">
+<meta property="og:description" content="awk命令的常用语法知识">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-11T15:51:55.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FicXie&#39;s Notes">
-<meta name="twitter:description" content="A man can be destroyed but not defeated.">
+<meta name="twitter:title" content="awk语法">
+<meta name="twitter:description" content="awk命令的常用语法知识">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/11/awk语法/">
 
 
 
 
 
-  <title>FicXie's Notes</title>
+  <title>awk语法 | FicXie's Notes</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -279,9 +279,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -311,9 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/11/awk语法/" itemprop="url">awk语法</a></h1>
+          <h1 class="post-title" itemprop="name headline">awk语法</h1>
         
 
         <div class="post-meta">
@@ -363,18 +361,33 @@
       
 
       
-        
-          <p>awk命令的常用语法知识<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/11/awk语法/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>awk命令的常用语法知识<br><a id="more"></a><br>awk命令语法：<br>awk [-F|-f|-v] ‘BEGIN{} // {command1; command2} END{}’ file 其中的参数（参数不一定需要全都有）：</p>
+<pre>
+[-F|-f|-v]     大参数，-F指定分隔符，-f调用脚本，-v定义变量 var=value
+''             引用代码块
+BEGIN          初始化代码块，在对每一行进行处理之前，初始化代码，主要是引用全局变量，
+               设置FS分隔符，可以在其中写print
+//             匹配代码块，可以是字符串或正则表达式 用法/pattern/
+{}             命令代码块，可以是while可、if、print等语法格式与c类似
+;              多条命令使用分号分隔
+END            结尾代码块，最终计算或者最后结果输出
+file           文件路径文件名，例：/etc/passwd
+</pre>
+常用变量：
+<pre>
+$0            表示整个当前行
+$1            每行第一个字段第二个字段$2以此类推
+NF            字段数量变量,每行多少个字段
+FS            BEGIN{FS='分隔符'}
+NR            每行的记录号，显示第一行awk -F","'NR==1{print}' file
+FNR           与NR类似，不过多文件记录不递增，每个文件都从1开始
+\t            制表符
+\n            换行符
+OFS           输出字段分隔符，默认也是空格，可以改为制表符等，例OFS="\t"
+-F'[:#/]'     定义三个分隔符
+</pre>
       
-    </p></div>
+    </div>
     
     
     
@@ -389,136 +402,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/11/awk/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FicXie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/dog.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FicXie's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/11/awk/" itemprop="url">使用awk完成同一文件不同列的比较</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-11T00:17:53+08:00">
-                2018-12-11
-              </time>
+              <a href="/2018/12/11/awk/" rel="next" title="使用awk完成同一文件不同列的比较">
+                <i class="fa fa-chevron-left"></i> 使用awk完成同一文件不同列的比较
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>  适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/11/awk/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </p></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -528,10 +433,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -539,6 +445,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -754,6 +664,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
