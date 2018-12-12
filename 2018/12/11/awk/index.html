@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="FicXie&#39;s Notes">
 <meta property="og:description" content="适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-11T14:57:03.815Z">
+<meta property="og:updated_time" content="2018-12-12T14:51:50.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用awk完成同一文件不同列的比较">
 <meta name="twitter:description" content="适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。">
@@ -361,7 +361,7 @@
       
 
       
-        <p>  适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。<br> <a id="more"></a><br>  使用方法：<br>  1、获取某一列的值<br>  假设有文件 employ.txt 其中<br>  张三,男,23岁,3000<br>  李四,男,24岁,4000<br>  铁柱,女,25岁,5000<br>  想要获取所有员工的姓名并把其保存到name.txt文件中，可以用awk实现，具体语法如下：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat employ.txt |awk -F <span class="string">","</span> <span class="string">'print&#123;$1&#125;'</span> | tr -s <span class="string">"\n"</span> &gt; name.txt</span><br></pre></td></tr></table></figure></p>
+        <p>  <em>适用场景：想要单独获取文件中某一列的值，或者需要对其中两列进行比较时。</em><br> <a id="more"></a><br>  使用方法：<br>  1、获取某一列的值<br>  假设有文件 employ.txt 其中<br>  张三,男,23岁,3000<br>  李四,男,24岁,4000<br>  铁柱,女,25岁,5000<br>  想要获取所有员工的姓名并把其保存到name.txt文件中，可以用awk实现，具体语法如下：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat employ.txt |awk -F <span class="string">","</span> <span class="string">'print&#123;$1&#125;'</span> | tr -s <span class="string">"\n"</span> &gt; name.txt</span><br></pre></td></tr></table></figure></p>
 <p>  该命令的含义是把”,”当做分隔符，输出文件第一列的值，并且把结果输出到name.txt文件中（注：此处用的是重定向，并非在name.txt文件结尾添加）<br>  假设有文件grade.txt 其中<br>  张三,89,80<br>  李四,80,60<br>  铁柱,99,99<br>  想要找出有几行的第三列大于第二列并将其打印，具体语法如下：<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l|awk -F <span class="string">","</span> <span class="string">'BEGIN&#123;count = 0;&#125;&#123;if($2&lt;$3)&#123;count = count+1;&#125;&#125; END&#123;print "count:",count&#125;'</span> garde.txt</span><br></pre></td></tr></table></figure></p>
 <p>  该命令是建立一个变量count用来计数，以”,”为分隔符，当$2&lt;$3时count数量加一，最后输出count的值</p>
 
