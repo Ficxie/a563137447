@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="FicXie&#39;s Notes">
 <meta property="og:description" content="HTML5新标签总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-12T16:20:27.435Z">
+<meta property="og:updated_time" content="2018-12-13T15:28:03.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5新特性总结">
 <meta name="twitter:description" content="HTML5新标签总结">
@@ -361,8 +361,15 @@
       
 
       
-        <p><em>HTML5新标签总结</em><br><a id="more"></a><br>HTML5对比HTML4更加语义化：<br><br><br><strong>&lt;header&gt;</strong><br><br>定义 section 或 page 的顶部。主要用于放其所在区块的标题、简介，还可以放置搜索表单、logo图片等元素，根据最新标准还可以放<strong>&lt;nav&gt;</strong>导航<br><br></p>
-<p><strong>&lt;nav&gt;</strong><br><br>定义导航链接。 只有语义化的作用，里面还需要加ul来构建导航<br><br><br><strong>&lt;article&gt;</strong><br><br>标签规定独立的自包含内容。可以独立于站点的其余部分进行分发，类似论坛帖子，报纸文章，用户评论等<br><br><br><strong>&lt;aside&gt;</strong><br><br>定义页面内容之外的内容。如文章或网站的侧栏（其他文章列表，广告）、文章的注解内容等。<br><br><br><strong>&lt;footer&gt;</strong><br><br>定义 section 或 page 的页脚。页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。<br><br><br><strong>&lt;section&gt;</strong><br><br>是一个主题性的内容分组，通常用于对页面进行分块或者对文章等进行分段，只有元素内容会被列在文档大纲中时，才适合用section元素。section的作用是对页面上的内容进行分块，如各个有标题的版块、功能区或对文章进行分段，不要与有自己完整、独立内容的article混淆。例如一个网站有体育板块、国际板块、财经板块等等</p>
+        <p><em>HTML5新标签总结</em><br><a id="more"></a><br>HTML5语义化标签：<br><br><br><strong>&lt;header&gt;</strong><br><br>定义 section 或 page 的顶部。主要用于放其所在区块的标题、简介，还可以放置搜索表单、logo图片等元素，根据最新标准还可以放<strong>&lt;nav&gt;</strong>导航<br><br></p>
+<p><strong>&lt;nav&gt;</strong><br><br>定义导航链接。 只有语义化的作用，里面还需要加ul来构建导航<br><br><br><strong>&lt;article&gt;</strong><br><br>标签规定独立的自包含内容。可以独立于站点的其余部分进行分发，类似论坛帖子，报纸文章，用户评论等<br><br><br><strong>&lt;aside&gt;</strong><br><br>定义页面内容之外的内容。如文章或网站的侧栏（其他文章列表，广告）、文章的注解内容等。<br><br><br><strong>&lt;footer&gt;</strong><br><br>定义 section 或 page 的页脚。页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。<br><br><br><strong>&lt;section&gt;</strong><br><br>是一个主题性的内容分组，通常用于对页面进行分块或者对文章等进行分段，只有元素内容会被列在文档大纲中时，才适合用section元素。section的作用是对页面上的内容进行分块，如各个有标题的版块、功能区或对文章进行分段，不要与有自己完整、独立内容的article混淆。例如一个网站有体育板块、国际板块、财经板块等等<br><br><br><br>文档级别语言:<br><br><br><strong>&lt;ruby&gt;**</strong>&lt;rt&gt;<strong>**&lt;rp&gt;</strong><br><br>ruby是一种排版注释系统，主要就有ruby、rt、rp三个标签，ruby 元素由一个或多个字符（需要一个解释/发音）和一个提供该信息的 rt 元素组成，还包括可选的 rp 元素，定义当浏览器不支持 “ruby” 元素时显示的内容。类似：</p>
+<blockquote>
+<pre><code>&lt;ruby&gt;
+    厉&lt;rt&gt;li&lt;/rt&gt;
+    害&lt;rt&gt;hai&lt;/rt&gt;
+&lt;/ruby&gt;
+</code></pre></blockquote>
+<p>显示效果：<br><br><ruby>厉<rt>li</rt>害<rt>hai</rt><ruby></ruby></ruby></p>
 
       
     </div>
