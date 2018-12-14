@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="FicXie&#39;s Notes">
 <meta property="og:description" content="HTML5新标签总结不包含已废除的标签">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-14T16:00:51.442Z">
+<meta property="og:updated_time" content="2018-12-14T17:04:11.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5新特性总结">
 <meta name="twitter:description" content="HTML5新标签总结不包含已废除的标签">
@@ -361,16 +361,50 @@
       
 
       
-        <p><em>HTML5新标签总结不包含已废除的标签</em><br><a id="more"></a><br>HTML5语义化标签：<br><br><br><strong>&lt;header&gt;</strong><br><br>定义 section 或 page 的顶部。主要用于放其所在区块的标题、简介，还可以放置搜索表单、logo图片等元素，根据最新标准还可以放<strong>&lt;nav&gt;</strong>导航<br><br></p>
-<p><strong>&lt;nav&gt;</strong><br><br>定义导航链接。 只有语义化的作用，里面还需要加ul来构建导航<br><br><br><strong>&lt;article&gt;</strong><br><br>标签规定独立的自包含内容。可以独立于站点的其余部分进行分发，类似论坛帖子，报纸文章，用户评论等<br><br><br><strong>&lt;aside&gt;</strong><br><br>定义页面内容之外的内容。如文章或网站的侧栏（其他文章列表，广告）、文章的注解内容等。<br><br><br><strong>&lt;figure&gt;</strong><br><br>标签规定独立的流内容（图像、图表、照片、代码等等）。<br><br><br><strong>&lt;footer&gt;</strong><br><br>定义 section 或 page 的页脚。页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。<br><br><br><strong>&lt;section&gt;</strong><br><br>是一个主题性的内容分组，通常用于对页面进行分块或者对文章等进行分段，只有元素内容会被列在文档大纲中时，才适合用section元素。section的作用是对页面上的内容进行分块，如各个有标题的版块、功能区或对文章进行分段，不要与有自己完整、独立内容的article混淆。例如一个网站有体育板块、国际板块、财经板块等等<br><br><br><br><strong>文档级别标签:</strong><br><br><br><br><strong>&lt;ruby&gt;</strong> <strong>&lt;rt&gt;</strong> <strong>&lt;rp&gt;</strong><br><br>ruby是一种排版注释系统，主要就有ruby、rt、rp三个标签，ruby 元素由一个或多个字符（需要一个解释/发音）和一个提供该信息的 rt 元素组成，还包括可选的 rp 元素，定义当浏览器不支持 “ruby” 元素时显示的内容。类似：</p>
+        <p><em>HTML5新标签总结不包含已废除的标签</em><br><a id="more"></a><br>HTML5语义化标签：<br><br><strong>&lt;header&gt;</strong><br><br>定义 section 或 page 的顶部。主要用于放其所在区块的标题、简介，还可以放置搜索表单、logo图片等元素，根据最新标准还可以放<strong>&lt;nav&gt;</strong>导航<br><br></p>
+<p><strong>&lt;nav&gt;</strong><br><br>定义导航链接。 只有语义化的作用，里面还需要加ul来构建导航<br><br><br><strong>&lt;article&gt;</strong><br><br>标签规定独立的自包含内容。可以独立于站点的其余部分进行分发，类似论坛帖子，报纸文章，用户评论等<br><br><br><strong>&lt;aside&gt;</strong><br><br>定义页面内容之外的内容。如文章或网站的侧栏（其他文章列表，广告）、文章的注解内容等。<br><br><br><strong>&lt;figure&gt;</strong><br><br>标签规定独立的流内容（图像、图表、照片、代码等等）。<br><br><br><strong>&lt;footer&gt;</strong><br><br>定义 section 或 page 的页脚。页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等等。<br><br><br><strong>&lt;section&gt;</strong><br><br>是一个主题性的内容分组，通常用于对页面进行分块或者对文章等进行分段，只有元素内容会被列在文档大纲中时，才适合用section元素。section的作用是对页面上的内容进行分块，如各个有标题的版块、功能区或对文章进行分段，不要与有自己完整、独立内容的article混淆。例如一个网站有体育板块、国际板块、财经板块等等<br><br><br><br><strong>文档级别标签:</strong></p>
+<p><strong>&lt;ruby&gt;</strong> <strong>&lt;rt&gt;</strong> <strong>&lt;rp&gt;</strong><br><br>ruby是一种排版注释系统，主要就有ruby、rt、rp三个标签，ruby 元素由一个或多个字符（需要一个解释/发音）和一个提供该信息的 rt 元素组成，还包括可选的 rp 元素，定义当浏览器不支持 “ruby” 元素时显示的内容。类似：</p>
 <blockquote>
 <pre><code>&lt;ruby&gt;
     厉&lt;rt&gt;li&lt;/rt&gt;
     害&lt;rt&gt;hai&lt;/rt&gt;
 &lt;/ruby&gt;
 </code></pre></blockquote>
-<p>显示效果：<br><ruby>厉<rt>li</rt>害<rt>hai</rt></ruby><br><br><br></p>
-<p><strong>&lt;time&gt;</strong><br><br>标签定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。目前大多数浏览器不支持此标签,主要给搜索引擎使用。<br><br><br><strong>&lt;mark&gt;</strong><br><br>标签定义带有记号的文本。效果:<mark>mark</mark><br><br><br><br><strong>&lt;wbr&gt;</strong><br><br>wbr元素用于让浏览器为长单词增加可选择的破折号，以便自动拆行。<br><br><br><strong>&lt;bdi&gt;</strong><br><br>标签允许您设置一段文本，使其脱离其父元素的文本方向设置。比如：Bill 80 把80放到标签里，可以通过标签的dir属性，来设置80放到Bill前还是Bill后。<br><br><br><strong>表单标签：</strong><br><br><strong>&lt;email&gt;</strong><br><br><strong>&lt;url&gt;</strong><br><br><strong>&lt;number&gt;</strong><br><br><strong>&lt;range&gt;</strong><br><br><strong>&lt;Date Pickers&gt;</strong><br><br><strong>&lt;search&gt;</strong><br><br><strong>&lt;color&gt;</strong><br><br>媒体标签：<br><br><strong>&lt;video&gt;</strong><br><br><strong>&lt;audio&gt;</strong><br><br><strong>&lt;embed&gt;</strong><br><br>其他标签:<br><br><strong>&lt;canvas&gt;</strong><br><br><strong>&lt;keygen&gt;</strong><br><br><strong>&lt;progress&gt;</strong><br><br><strong>&lt;command&gt;</strong><br><br><strong>&lt;deteils&gt;</strong><br><br><strong>&lt;dateilst&gt;</strong><br></p>
+<p>显示效果：<br><ruby>厉<rt>li</rt>害<rt>hai</rt></ruby><br><br></p>
+<p><strong>&lt;time&gt;</strong><br><br>标签定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。目前大多数浏览器不支持此标签,主要给搜索引擎使用。<br><br><br><strong>&lt;mark&gt;</strong><br><br>标签定义带有记号的文本。效果:<mark>mark</mark><br><br><br><strong>&lt;wbr&gt;</strong><br><br>wbr元素用于让浏览器为长单词增加可选择的破折号，以便自动拆行。<br><br><br><strong>&lt;bdi&gt;</strong><br><br>标签允许您设置一段文本，使其脱离其父元素的文本方向设置。比如：Bill 80 把80放到标签里，可以通过标签的dir属性，来设置80放到Bill前还是Bill后。<br><br><br><strong>表单：</strong><br><br>email<br><br>输入邮箱地址，会在输入时提示要带@符号</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;email&quot;/&gt;
+</code></pre></blockquote>
+<p>url<br><br>输入时输入的不是URL地址，会提示输入网址</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;url&quot;/&gt;
+</code></pre></blockquote>
+<p>number<br><br>选取数字，可以设置最大、最小值，一次跳动大小。</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;number&quot;/&gt;
+</code></pre></blockquote>
+<p>range<br><br>可以拖动的滑块，可是设置起始位置及一次拖动的变化量</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;range&quot;/&gt;
+</code></pre></blockquote>
+<p>Date<br><br>时间表，用于选取时间</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;Date&quot;/&gt;
+</code></pre></blockquote>
+<p>search<br><br>搜索框，和普通输入框不同的是最左边有个删除按键，可以一下清空搜索框。</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;search&quot;/&gt;
+</code></pre></blockquote>
+<p>color<br><br>用调色板选取颜色。</p>
+<blockquote>
+<pre><code>&lt;input type=&quot;color&quot;/&gt;
+</code></pre></blockquote>
+<p><strong>媒体标签：</strong><br><br><strong>&lt;video&gt;</strong></p>
+<p>标签定义视频，比如电影片段或其他视频流。有7个属性height（高）、width（宽）、loop（是否循环）、controls（如果出现该属性，则向用户显示控件，比如播放按钮。）、autoplay（如果出现该属性，则视频在就绪后马上播放。）、preload（如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。）、src(要播放的视频的 URL。)<br><br></p>
+<p><strong>&lt;audio&gt;</strong></p>
+<p>标签定义声音，比如音乐或其他音频流。有5个属性autoplay(如果出现该属性，则音频在就绪后马上播放。部分游览器不兼容)、controls（如果出现该属性，则向用户显示控件，比如播放按钮。）、loop（如果出现该属性，则每当音频结束时重新开始播放。）、preload（如果出现该属性，则音频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。）、src（要播放的音频的 URL。）<br><br></p>
+<p><strong>&lt;embed&gt;</strong><br><br>标签定义嵌入的内容，比如插件。<br><br></p>
+<p><strong>其他标签:</strong><br><br><strong>&lt;canvas&gt;</strong><br><br><strong>&lt;keygen&gt;</strong><br><br><strong>&lt;progress&gt;</strong><br><br><strong>&lt;command&gt;</strong><br><br><strong>&lt;deteils&gt;</strong><br><br><strong>&lt;dateilst&gt;</strong><br></p>
 
       
     </div>
