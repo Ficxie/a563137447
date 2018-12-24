@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[常用Linux命令]]></title>
     <url>%2F2018%2F12%2F21%2F%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[常用的Linux命令查找文件：1$ find / -name xie* 查看进程： 查看端口： 结束进程：1kill -9 7342 复制文件：1cp 解压文件：123unzipgunzipgzip 删除文件：删库命令1$ rm -rf /*]]></content>
+    <content type="text"><![CDATA[常用的Linux命令查找文件：$ find / -name filename 查看进程： 查看端口： 结束进程：kill -9 [PID]&nbsp;&nbsp;(强制结束进程) 复制文件：1cp [源文件路径] [目标路径] 修改文件权限、属组、所有者： 解压文件：.zip格式解压:unzip 解压文件名.zip -d [解压后文件名]压缩:zip 压缩后文件名.zip 需要压缩文件.tar格式解包：tar xvf FileName.tar打包：tar cvf 打包后文件名.tar 需要打包文件.rar格式解压：rar x FileName.rar压缩：rar a 压缩后文件名.rar 需要压缩文件名.gz格式解压：gunzip FileName.gz压缩：gzip -d FileName.gz压缩：gizp FileName.tar.gz格式可以先打tar包在压缩为.gz格式 解压先解压gz格式，再解包解压：tar zxvf FileName.tar.gz压缩：tar zcvf 压缩后文件名.tar.gz 需要压缩文件名 删除文件：rm -rf * 删除当前目录所有文件及目录（包括目录中文件）删库命令1$ rm -rf /*]]></content>
   </entry>
   <entry>
     <title><![CDATA[HTML5新特性总结]]></title>

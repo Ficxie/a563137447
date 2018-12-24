@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Mr.Xie&#39;s Notes">
 <meta property="og:description" content="常用的Linux命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-21T16:25:05.537Z">
+<meta property="og:updated_time" content="2018-12-24T15:49:32.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用Linux命令">
 <meta name="twitter:description" content="常用的Linux命令">
@@ -341,13 +341,14 @@
       
 
       
-        <p><em>常用的Linux命令</em><br><a id="more"></a><br>查找文件：<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find / -name xie*</span><br></pre></td></tr></table></figure></p>
+        <p><em>常用的Linux命令</em><br><a id="more"></a><br>查找文件：<br><br>$ find / -name filename </p>
 <p>查看进程：<br></p>
 <p>查看端口：<br></p>
-<p>结束进程：<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 7342</span><br></pre></td></tr></table></figure></p>
-<p>复制文件：<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp</span><br></pre></td></tr></table></figure></p>
-<p>解压文件：<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">unzip</span><br><span class="line">gunzip</span><br><span class="line">gzip</span><br></pre></td></tr></table></figure></p>
-<p>删除文件：<br><br>删库命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf /*</span><br></pre></td></tr></table></figure></p>
+<p>结束进程：<br><br>kill -9 [PID]&nbsp;&nbsp;(强制结束进程)</p>
+<p>复制文件：<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [源文件路径] [目标路径]</span><br></pre></td></tr></table></figure></p>
+<p>修改文件权限、属组、所有者：<br></p>
+<p>解压文件：<br><br>.zip格式<br><br>解压:unzip 解压文件名.zip -d [解压后文件名]<br><br>压缩:zip 压缩后文件名.zip 需要压缩文件<br><br>.tar格式<br><br>解包：tar xvf FileName.tar<br><br>打包：tar cvf 打包后文件名.tar 需要打包文件<br><br>.rar格式<br><br>解压：rar x FileName.rar<br><br>压缩：rar a 压缩后文件名.rar 需要压缩文件名<br><br>.gz格式<br><br>解压：gunzip FileName.gz<br><br>压缩：gzip -d FileName.gz<br><br>压缩：gizp FileName<br><br>.tar.gz格式<br><br>可以先打tar包在压缩为.gz格式 解压先解压gz格式，再解包<br><br>解压：tar zxvf FileName.tar.gz<br>压缩：tar zcvf 压缩后文件名.tar.gz 需要压缩文件名<br></p>
+<p>删除文件：<br><br>rm -rf *  删除当前目录所有文件及目录（包括目录中文件）<br><br>删库命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf /*</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
