@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Mr.Xie&#39;s Notes">
 <meta property="og:description" content="常用的Linux命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-24T15:49:32.168Z">
+<meta property="og:updated_time" content="2018-12-25T15:50:11.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用Linux命令">
 <meta name="twitter:description" content="常用的Linux命令">
@@ -341,14 +341,15 @@
       
 
       
-        <p><em>常用的Linux命令</em><br><a id="more"></a><br>查找文件：<br><br>$ find / -name filename </p>
-<p>查看进程：<br></p>
-<p>查看端口：<br></p>
-<p>结束进程：<br><br>kill -9 [PID]&nbsp;&nbsp;(强制结束进程)</p>
-<p>复制文件：<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp [源文件路径] [目标路径]</span><br></pre></td></tr></table></figure></p>
-<p>修改文件权限、属组、所有者：<br></p>
-<p>解压文件：<br><br>.zip格式<br><br>解压:unzip 解压文件名.zip -d [解压后文件名]<br><br>压缩:zip 压缩后文件名.zip 需要压缩文件<br><br>.tar格式<br><br>解包：tar xvf FileName.tar<br><br>打包：tar cvf 打包后文件名.tar 需要打包文件<br><br>.rar格式<br><br>解压：rar x FileName.rar<br><br>压缩：rar a 压缩后文件名.rar 需要压缩文件名<br><br>.gz格式<br><br>解压：gunzip FileName.gz<br><br>压缩：gzip -d FileName.gz<br><br>压缩：gizp FileName<br><br>.tar.gz格式<br><br>可以先打tar包在压缩为.gz格式 解压先解压gz格式，再解包<br><br>解压：tar zxvf FileName.tar.gz<br>压缩：tar zcvf 压缩后文件名.tar.gz 需要压缩文件名<br></p>
-<p>删除文件：<br><br>rm -rf *  删除当前目录所有文件及目录（包括目录中文件）<br><br>删库命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rm -rf /*</span><br></pre></td></tr></table></figure></p>
+        <p><em>常用的Linux命令</em><br><a id="more"></a><br><strong>查找文件：</strong><br>find 所要查找路径 -name 文件名/文件夹名（用正则表达式则需要相同路径下没有名字相同的文件夹与文件名）</p>
+<p><strong>查看进程：</strong><br>ps -ef|grep 进程名或表达式<br>ps aux|grep 进程名或表达式<br>查看已删除但未终止进程：lsof -n |grep deleted</p>
+<p><strong>查看端口：</strong><br>lsof -i:端口号<br>查看TCP类型端口：netstat -ntpl<br>查看UDP类型端口：netstat -nupl<br>查看端口连接IP：netstat -anp|grep 端口号<br>查看一个服务有几个端口：ps -ef|grep 进程名<br>查看网络端口的使用情况：netstat -an|grep 端口号<br>查看服务器上的服务及端口：netstat -lanp<br>-t:显示TCP端口<br>-u:显示UDP端口<br>-l:仅显示监听套接字<br>-p:显示进程标识符和程序名称<br>-n:显示IP</p>
+<p><strong>结束进程：</strong><br>kill -9 [PID] (强制结束进程)</p>
+<p><strong>复制文件：</strong><br>cp [源文件路径] [目标路径]</p>
+<p><strong>修改文件权限、属组、所有者：</strong><br>chmod -R 权限（可以是数字，也可以是+x..） 文件名/目录名 给某一文件或目录下所有文件及目录权限<br>chown -R user：groupid 文件/目录名 给某一文件或目录及目录下文件目录更改拥有者</p>
+<p><strong>解压、压缩文件：</strong><br>.zip格式<br>解压:unzip 解压文件名.zip -d [解压后文件名]<br>压缩:zip 压缩后文件名.zip 需要压缩文件<br>.tar格式<br>解包：tar xvf FileName.tar<br>打包：tar cvf 打包后文件名.tar 需要打包文件<br>.rar格式<br>解压：rar x FileName.rar<br>压缩：rar a 压缩后文件名.rar 需要压缩文件名<br>.gz格式<br>解压：gunzip FileName.gz<br>压缩：gzip -d FileName.gz<br>压缩：gizp FileName<br>.tar.gz格式<br>可以先打tar包在压缩为.gz格式 解压先解压gz格式，再解包<br>解压：tar zxvf FileName.tar.gz<br>压缩：tar zcvf 压缩后文件名.tar.gz 需要压缩文件名</p>
+<p><strong>删除文件：</strong><br>rm -rf 目录名/文件名 删除当前目录所有文件及目录（包括目录中文件）<br>rm 文件名</p>
+<p><strong>查看日志：</strong><br>tailf 日志名 （此命令查看日志可以实时查看日志新增行）</p>
 
       
     </div>
